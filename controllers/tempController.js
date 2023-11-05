@@ -17,7 +17,7 @@ class MainController {
                     console.log(data)
                     res.json({
                         status: 200,
-                        message: "Log uploaded successfully",
+                        message: "Valor registrado correctamente",
                         affectedRows: data.affectedRows
                     })
                 }
@@ -42,7 +42,7 @@ class MainController {
             console.log(data)
             res.json({
               status: 200,
-              message: "Log uploaded successfully",
+              message: "Estado registrado correctamente",
               affectedRows: data.affectedRows
             })
           }
