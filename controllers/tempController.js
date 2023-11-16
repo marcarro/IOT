@@ -13,6 +13,7 @@ class MainController {
                 if(error) {
                     res.status(500)
                     res.send(error.message)
+                    console.log(error.message)
                 } else {
                     console.log(data)
                     res.json({
@@ -33,7 +34,7 @@ class MainController {
       if(req.params.deviceID != null && req.params.state != null) {
         let deviceID = req.params.deviceID
         let state = req.params.state;
-        var sql = `INSERT INTO DatosActuador (idActuador, estado, fecha) VALUES (${deviceID}, '${state}', NOW())`;
+        var sql = `INSERT INTO DatosActuador (idActuador, idEstado, fecha) VALUES (${deviceID}, '${state}', NOW())`;
         mysql.query(sql, (error,data,fields) => {
           if(error) {
             res.status(500)
